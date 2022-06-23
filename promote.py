@@ -1,0 +1,1 @@
+print('Promoting the artifacts')
