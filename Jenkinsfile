@@ -39,7 +39,7 @@ pipeline {
         stage('Run stage on condition') {
             when() {
                 allOf {
-                    environment name: 'TOGGLE', value: true
+                    environment name: 'TOGGLE', value: 'true'
                 }
             }
             steps {
