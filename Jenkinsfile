@@ -23,7 +23,7 @@ pipeline {
                 sh 'sudo apt update -y'
                 sh 'curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash'
                 sh 'export NVM_DIR="$HOME/.nvm"'
-                sh '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  // This loads nvm
+                sh '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'  // This loads nvm
                 sh 'nvm install node'
                 sh 'node --version'
             }
