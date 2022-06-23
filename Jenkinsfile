@@ -23,6 +23,8 @@ pipeline {
                 sh 'sudo apt update -y'
                 sh '''#!/bin/bash
                     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash;
+                '''
+                sh '''#!/bin/bash
                     source ~/.profile; source ~/.bashrc;
                     nvm install node;
                     node --version;
