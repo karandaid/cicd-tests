@@ -21,9 +21,8 @@ pipeline {
         stage('Prepare') {
             steps {
                 sh 'sudo apt update -y'
-                sh 'curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash'
-                sh '[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"'  // This loads nvm
                 sh '''#!/bin/bash
+                    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
                     source ~/.profile; source ~/.bashrc;
                     nvm install node;
                     node --version;
