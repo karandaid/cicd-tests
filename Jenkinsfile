@@ -21,17 +21,7 @@ pipeline {
         stage('Prepare') {
             steps {
                 sh 'sudo apt update -y'
-                sh '''#!/bin/bash
-                    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash;
-                '''
-                sh '''#!/bin/bash
-                    source ~/.profile; source ~/.bashrc;
-                    cat ~/.bashrc;
-                    whoami;
-                    echo $NVM_DIR;
-                    nvm install node;
-                    node --version;
-                '''
+                sh 'node --version'
             }
         }
         stage('Show Parameters') {
