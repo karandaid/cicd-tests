@@ -14,9 +14,7 @@ pipeline {
         }
         stage('NodeJS') {
             steps {
-                nodejs('nodejs') {
-                    sh 'node --vesion'
-                }
+                sh 'node --version'
             }
         }
     }
