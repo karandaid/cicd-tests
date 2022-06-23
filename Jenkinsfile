@@ -26,6 +26,8 @@ pipeline {
                 '''
                 sh '''#!/bin/bash
                     source ~/.profile; source ~/.bashrc;
+                    cat ~/.bashrc;
+                    whoami;
                     nvm install node;
                     node --version;
                 '''
