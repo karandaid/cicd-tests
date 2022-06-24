@@ -1,0 +1,28 @@
+properties([pipelineTriggers([githubPush()])])
+
+pipeline {
+    agent {
+        label 'test'
+    }
+    tools {
+        nodejs 'nodejs'
+    }
+    parameters {
+    }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                script {
+                    sh 'ls -lrt'
+                }
+            }
+        }
+        stage('Prepare') {
+            steps {
+                sh 'sudo apt update -y'
+                sh 'node --version'
+            }
+        }        
+    }
+}
